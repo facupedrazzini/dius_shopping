@@ -1,3 +1,11 @@
+# Execution
+
+-   `npm i`
+
+-   `npm test`
+
+# Task
+
 DiUS is starting a computer store. You have been engaged to build the checkout system. We will start with the following products in our catalogue
 
 | SKU |    Name     |     Price |
