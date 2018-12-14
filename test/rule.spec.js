@@ -18,6 +18,22 @@ describe('Rule', () => {
 			assert.equal(rule.paidSkuProduct, 'mbp');
 			assert.equal(rule.freeSkuProduct, 'vga');
 		});
+
+		it('should apply the correct price', () => {
+			const items = [
+				{ ...data.products.mackbookPro },
+				{ ...data.products.vgaAdapter },
+				{ ...data.products.vgaAdapter },
+				{ ...data.products.ipad }
+			];
+
+			const updatedItems = rule.updatePrices(
+				data.products.mackbookPro.sku,
+				items
+			);
+
+			assert.equal(updatedItems.filter(it => it.price === 0).length, 1);
+		});
 	});
 
 	describe('DiscountPerQuantityRule', () => {
@@ -35,6 +51,26 @@ describe('Rule', () => {
 			assert.equal(rule.priceWithDiscount, 499.99);
 			assert.equal(rule.minimumQuantity, 4);
 		});
+
+		it('should apply the correct price', () => {
+			const items = [
+				{ ...data.products.ipad },
+				{ ...data.products.ipad },
+				{ ...data.products.ipad },
+				{ ...data.products.ipad }
+			];
+
+			const updatedItems = rule.updatePrices(
+				data.products.ipad.sku,
+				items
+			);
+
+			assert.equal(
+				updatedItems.filter(it => it.price === rule.priceWithDiscount)
+					.length,
+				4
+			);
+		});
 	});
 
 	describe('XforXRule', () => {
@@ -51,6 +87,21 @@ describe('Rule', () => {
 			assert.equal(rule.paidQuantity, 2);
 			assert.equal(rule.totalQuantity, 3);
 			assert.equal(rule.sku, 'atv');
+		});
+
+		it('should apply the correct price', () => {
+			const items = [
+				{ ...data.products.appleTv },
+				{ ...data.products.appleTv },
+				{ ...data.products.appleTv }
+			];
+
+			const updatedItems = rule.updatePrices(
+				data.products.appleTv.sku,
+				items
+			);
+
+			assert.equal(updatedItems[2].price, 0);
 		});
 	});
 });

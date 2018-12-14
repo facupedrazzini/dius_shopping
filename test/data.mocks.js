@@ -14,7 +14,9 @@ module.exports = {
 	},
 	rules: {
 		xForX: new XForXRule(rules.X_FOR_X),
-		discountPerQuantity: new DiscountPerQuantityRule(rules.X_FOR_X),
+		discountPerQuantity: new DiscountPerQuantityRule(
+			rules.DISCOUNT_PER_QUANTITY
+		),
 		bundle: new BundleRule(rules.BUNDLE)
 	}
 };

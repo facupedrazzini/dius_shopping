@@ -25,16 +25,5 @@ describe('Checkout', () => {
 
 			assert.equal(checkout.items[0].sku, 'atv');
 		});
-
-		describe('XForXRule', () => {
-			it('should apply the coorect price', () => {
-				checkout.scan(data.products.appleTv);
-				checkout.scan(data.products.appleTv);
-				checkout.scan(data.products.appleTv);
-				console.log(checkout.items);
-
-				assert.equal(checkout.items[2].price, 0);
-			});
-		});
 	});
 });
