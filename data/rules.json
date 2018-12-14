@@ -1,0 +1,16 @@
+{
+	"X_FOR_X": {
+		"sku": "atv",
+		"totalQuantity": 3,
+		"paidQuantity": 2
+	},
+	"DISCOUNT_PER_QUANTITY": {
+		"sku": "ipd",
+		"priceWithDiscount": 499.99,
+		"minimumQuantity": 4
+	},
+	"BUNDLE": {
+		"paidSkuProduct": "mbp",
+		"freeSkuProduct": "vga"
+	}
+}
