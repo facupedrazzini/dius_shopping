@@ -1,0 +1,22 @@
+{
+	"IPAD": {
+		"sku": "ipd",
+		"name": "Super iPad",
+		"Price": 549.99
+	},
+	"MACKBOOK_PRO": {
+		"sku": "mbp",
+		"name": "MackBook Pro",
+		"Price": 1399.99
+	},
+	"APPLE_TV": {
+		"sku": "atv",
+		"name": "Apple TV",
+		"Price": 109.5
+	},
+	"VGA_ADAPTER": {
+		"sku": "vga",
+		"name": "VGA adapter",
+		"Price": 30
+	}
+}
