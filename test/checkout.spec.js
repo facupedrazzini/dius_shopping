@@ -32,6 +32,10 @@ describe('Checkout', () => {
 			checkout = new Checkout({ pricingRules });
 		});
 
+		it('should return 0 without items', () => {
+			assert.equal(checkout.total(), 0);
+		});
+
 		it('should work the first example scenario', () => {
 			checkout.scan(data.products.appleTv);
 			checkout.scan(data.products.appleTv);

@@ -1,10 +1,16 @@
-# Execution
+# DiUS Shopping
 
--   `npm i`
+## Dependencies
 
--   `npm test`
+-   Node.js 11.4.0
+-   Npm 6.4.1
 
-# Task
+## Run Tests
+
+1.  `npm i`
+2.  `npm test`
+
+## Task
 
 DiUS is starting a computer store. You have been engaged to build the checkout system. We will start with the following products in our catalogue
 
